@@ -6,6 +6,7 @@ import TableData from './TableData';
 import FileUploader from './FileUploader';
 import Login from './Login';
 import CreateAccount from './CreateAccount';
+import Welcome from './Welcome';
 
 function App() {
   const myApartment = {
@@ -14,11 +15,13 @@ function App() {
     rent: 1200,
   };
   return (
+    // <Welcome/>
     <Router>
       <Routes>
+      <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
         <Route path="/login" element={<LoginWithoutHeader><Login /></LoginWithoutHeader>} />
         <Route path="/createaccount" element={<LoginWithoutHeader><CreateAccount /></LoginWithoutHeader>} />
-        <Route path="/" element={<DefaultLayout />} />
+        <Route path="/listings" element={<DefaultLayout><FileUploader /></DefaultLayout>} />
       </Routes>
     </Router>
   );
@@ -39,8 +42,18 @@ const DefaultLayout = () => (
   </div>
 );
 
+
+
 // Define a layout without the header for the login page
 const LoginWithoutHeader = ({ children }) => (
+  <div>
+    <Routes>
+      <Route path="/" element={children} />
+    </Routes>
+  </div>
+);
+
+const WelcomeWithoutHeader = ({ children }) => (
   <div>
     <Routes>
       <Route path="/" element={children} />
