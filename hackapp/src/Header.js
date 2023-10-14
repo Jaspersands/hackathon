@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import './Header.css'; 
 import logo from './Assets/apartment_logo.svg'
 
-
+function redirectToLogin() {
+  const currentUrl = window.location.href;
+  const loginUrl = currentUrl + 'login';
+  window.location.href = loginUrl;
+}
 
 function Header() {
   const [showDropdownUni, setShowDropdownUni] = useState(false);
@@ -66,7 +70,9 @@ function Header() {
         </div>
       </div>
       <div className="header__user">
-        <div className="login">Login</div>
+        <button className='login_button' onClick={redirectToLogin}>
+          login
+        </button>
       </div>
     </header>
   );
