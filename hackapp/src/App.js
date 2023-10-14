@@ -5,6 +5,7 @@ import Header from './Header';
 import TableData from './TableData';
 import FileUploader from './FileUploader';
 import Login from './Login';
+import CreateAccount from './CreateAccount';
 
 function App() {
   const myApartment = {
@@ -15,7 +16,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<LoginWithoutHeader />} />
+        <Route path="/login" element={<LoginWithoutHeader><Login /></LoginWithoutHeader>} />
+        <Route path="/createaccount" element={<LoginWithoutHeader><CreateAccount /></LoginWithoutHeader>} />
         <Route path="/" element={<DefaultLayout />} />
       </Routes>
     </Router>
@@ -38,10 +40,10 @@ const DefaultLayout = () => (
 );
 
 // Define a layout without the header for the login page
-const LoginWithoutHeader = () => (
+const LoginWithoutHeader = ({ children }) => (
   <div>
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={children} />
     </Routes>
   </div>
 );
