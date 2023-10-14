@@ -12,10 +12,10 @@ function ApartmentCard({ apartment }) {
   return (
     <div className ="card" >
       <img className="image" src={houseImage} alt="square-image"  />
-      <div>
-        <p>{title}</p>
-        <p>{semester}</p>
-        <p>{price}</p>
+      <div className="description">
+        <p className="text">{title}</p>
+        <p className="semester">{semester}</p>
+        <p className="price">{price}</p>
       </div>
     </div>
   );
