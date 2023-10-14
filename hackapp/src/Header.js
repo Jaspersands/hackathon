@@ -69,11 +69,11 @@ function Header() {
           )}
         </div>
       </div>
-      <div className="header__user">
+      {/* <div className="header__user">
         <button className='login_button' onClick={redirectToLogin}>
           login
         </button>
-      </div>
+      </div> */}
     </header>
   );
 }
