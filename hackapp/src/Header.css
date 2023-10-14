@@ -1,0 +1,120 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid black;
+  }
+  
+  
+  .header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header__buttons {
+    display: flex;
+    gap: 0px;
+  }
+
+  .semester_dropdown {
+    position: relative;
+    display: inline-block;
+    color: black;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+}
+
+.semester_dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.semester_dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.semester_dropdown li:hover {
+    background-color: #ddd; 
+}
+  
+  .university_dropdown {
+    position: relative; 
+    display: inline-block; 
+    color: black;
+    border: 1px solid #ccc;
+    background: #f0f0f0; 
+  }
+  
+  .university_dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .university_dropdown li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .university_dropdown li:hover {
+    background-color: #ddd; 
+  }
+
+  .university_button {
+    background-color: #c9cccc7e; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: black; 
+    font-size: 16px; 
+    cursor: pointer;
+    border-right: 1px solid black; 
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    width: 150px;
+    height: 30px;
+}
+.university_button:hover {
+  background-color: #999a9a7e; 
+}
+
+.semester_button:hover {
+  background-color: #999a9a7e; 
+}
+
+
+  .semester_button{
+    background-color: #c9cccc7e; 
+    color: black; 
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+  }
+
+  
+  .header__user {
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  
+  .header__user button {
+    margin-left: 10px;
+  }
+
+  .header__logo img {
+    width: 40px; 
+    height: auto; 
+  }
