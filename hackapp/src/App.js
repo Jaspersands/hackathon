@@ -9,19 +9,14 @@ import CreateAccount from './CreateAccount';
 import Welcome from './Welcome';
 
 function App() {
-  const myApartment = {
-    addressabrev: "123 Main St",
-    semester: "Fall",
-    rent: 1200,
-  };
+  
   return (
-    // <Welcome/>
     <Router>
       <Routes>
       <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
         <Route path="/login" element={<LoginWithoutHeader><Login /></LoginWithoutHeader>} />
         <Route path="/createaccount" element={<LoginWithoutHeader><CreateAccount /></LoginWithoutHeader>} />
-        <Route path="/listings" element={<DefaultLayout><FileUploader /></DefaultLayout>} />
+        <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
       </Routes>
     </Router>
   );
@@ -31,7 +26,6 @@ function App() {
 const DefaultLayout = () => (
   <div>
     <Header />
-    {/* <ApartmentCard apartment={myApartment} /> */}
     <div className="App">
       <header className="App-header">
         <h4>Supabase db Uploader</h4>
