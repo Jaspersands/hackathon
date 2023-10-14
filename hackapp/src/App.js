@@ -7,6 +7,11 @@ import FileUploader from './FileUploader';
 import Login from './Login';
 
 function App() {
+  const myApartment = {
+    addressabrev: "123 Main St",
+    semester: "Fall",
+    rent: 1200,
+  };
   return (
     <Router>
       <Routes>
@@ -21,6 +26,7 @@ function App() {
 const DefaultLayout = () => (
   <div>
     <Header />
+    {/* <ApartmentCard apartment={myApartment} /> */}
     <div className="App">
       <header className="App-header">
         <h4>Supabase db Uploader</h4>

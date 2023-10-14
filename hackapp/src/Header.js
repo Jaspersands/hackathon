@@ -26,7 +26,7 @@ function Header() {
   };
 
   const selectSemester = (semester) => {
-    // Handle selecting semester (if needed)
+    setSelectedSemester(semester);
     setShowDropdownSem(false);
   };
 
@@ -57,7 +57,7 @@ function Header() {
               </ul>
             </div>
           )}         
-          <button className='semester_button' onClick={toggleDropdownSem}>Semester</button>
+          <button className='semester_button' onClick={toggleDropdownSem}>{selectedSemester || 'Semester'}</button>
           {showDropdownSem && (
             <div className="semester_dropdown">
               <ul>
