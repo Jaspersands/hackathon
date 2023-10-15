@@ -47,13 +47,8 @@ const DefaultLayout = () => (
 
 const NewListing = () => (
   <div>
-    
     <div className="App">
-      <header className="App-header">
-  
         <FileUploader />
-      </header>
-      
     </div>
   </div>
 );

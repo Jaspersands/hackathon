@@ -80,7 +80,7 @@ function Header() {
         </div>
         
       </div>
-      <div onClick={toNewListings} style={{ cursor: 'pointer', color: 'black' }}>
+      <div className="new_listing" onClick={toNewListings} style={{ cursor: 'pointer', color: 'black' }}>
       Create New Listing
     </div>
       {/* <div className="header__user">
