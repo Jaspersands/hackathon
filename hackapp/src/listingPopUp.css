@@ -1,25 +1,71 @@
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
+/* colors: 
+dark dark:#2b1549;
+dark: #4a267e
+normal: #9463f6
+light: #c7b7dd
+white: #e7dff1
+*/
+
+@font-face {
+  font-family: 'Varela Round';
+  src: url('./Assets/fonts/VarelaRound-Regular.ttf') format('truetype');
+}
+
+
+.popup-content{
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center;
+  text-align: center;
+  max-height: 650px; 
+  overflow-y: auto; 
+  align-items: center;
+
+}
+.popUp{
+  max-height: 80vh;
+  overflow-y: auto; 
+}
+
+.pop-up-image {
+  width: 800px;
+  height: 400px;
+  max-height: 500px;
+}
+
+.address{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+}
+
+.desc{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+}
+
+.rent{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+}
+
+.availability{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+}
+
+.message-lister-button{
+  border-radius: 5px;
+  background-color: #4a267e;
+  color: white;
+  border: none;
+  width: 10rem;
+  height: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+
+}
+
+.message{
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+

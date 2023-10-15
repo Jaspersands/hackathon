@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //import login_cartoon from './Assets/login_cartoon_purple.svg';
 //import AsyncStorage from "@react-native-async-storage/async-storage";
-import logo from './Assets/apartment_logo.svg';
+import logo from './Assets/apartment_logo_white.svg';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext'; // Assuming you've created AuthContext.js
 import supabase from './supabase';
@@ -37,9 +37,11 @@ function Welcome() {
 
         // Check if the user is already logged in
         if (loggedIn !== -1) {
-        // Redirect or handle as needed
-        // Example: Redirect to the home page
-        navigate('/listings');
+            // Redirect or handle as needed
+            // Example: Redirect to the home page
+            const currentUrl = window.location.href;
+            const listingUrl = currentUrl + 'listings';
+            window.location.href = listingUrl;
         }
     }, [auth]);
 
@@ -192,7 +194,6 @@ function Welcome() {
                             <input
                                 type="text"
                                 id="email"
-                                class = "input-padding"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
@@ -202,12 +203,11 @@ function Welcome() {
                             <input
                                 type="password"
                                 id="password"
-                                class="input-padding"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        <button idtype="button" id = "login_register_on" onClick={handleLogin}>
+                        <button type="button" onClick={handleLogin}>
                             Login
                         </button>
                     </form>
@@ -236,7 +236,6 @@ function Welcome() {
                             <input
                                 type="text"
                                 id="firstName"
-                                class = "input-padding"
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
                                 required
@@ -247,7 +246,6 @@ function Welcome() {
                             <input
                                 type="text"
                                 id="lastName"
-                                class="input-padding"
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                                 required
@@ -258,7 +256,6 @@ function Welcome() {
                             <input
                                 type="email"
                                 id="schoolEmail"
-                                class="input-padding"
                                 value={schoolEmail}
                                 onChange={(e) => setSchoolEmail(e.target.value)}
                                 required
@@ -267,7 +264,7 @@ function Welcome() {
                         <div className="input_box_login">
                             <label htmlFor="schoolYear">School Year</label>
                             <select
-                                id = "dropdownbutton" class = "input-padding" value={schoolYear}
+                                value={schoolYear}
                                 onChange={(e) => setSchoolYear(e.target.value)}
                                 required
                             >
@@ -284,7 +281,6 @@ function Welcome() {
                             <input
                                 type="tel"
                                 id="phoneNumber"
-                                class="input-padding"
                                 value={phoneNumber}
                                 onChange={(e) => setPhoneNumber(e.target.value)}
                                 required
@@ -295,13 +291,12 @@ function Welcome() {
                             <input
                                 type="password"
                                 id="password"
-                                class="input-padding"
                                 value={passwordReg}
                                 onChange={(e) => setPasswordReg(e.target.value)}
                                 required
                             />
                         </div>
-                        <button id = "login_register_on" type="submit">Submit</button>
+                        <button type="submit">Submit</button>
                     </form>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
 
