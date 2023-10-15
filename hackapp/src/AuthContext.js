@@ -18,8 +18,11 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     // Remove the user's authentication information from local storage
+    console.log(localStorage);
     localStorage.removeItem('userId');
+    console.log(localStorage);
     setLoggedIn(-1);
+    console.log(loggedIn);
   };
 
   // ...

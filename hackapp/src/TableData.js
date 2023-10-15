@@ -13,6 +13,21 @@ function TableData() {
     const [data, setData] = useState([]);
     const [selectedApartment, setSelectedApartment] = useState(null);
     const [isPopUp, setIsPopUp] = useState(false);
+    const auth = useAuth(); // Assuming useAuth provides a method to check if the user is logged in
+
+    const { login, loggedIn } = useAuth();
+    console.log(loggedIn)
+    const navigate = useNavigate();
+    useEffect(() => {
+        
+        // Check if the user is already logged in
+        if (loggedIn == -1) {
+        // Redirect or handle as needed
+        // Example: Redirect to the home page
+        navigate('/');
+        }
+    }, [auth]);
+
 
 
     useEffect(() => {
