@@ -10,7 +10,6 @@ import { useSemester } from './SemesterContext';
 function Header() {
   const [data, setData] = useState('');
   const [semesters, setSemesters] = useState(['Spring 2024', 'Summer 2024', 'Fall 2024']);
-
   const navigate = useNavigate();
   const { logout,loggedIn } = useAuth();
   const universities = {
@@ -60,7 +59,7 @@ function Header() {
     logout();
   }
 
-  // Add an event handler to update the selected semester
+ 
   const handleSemesterChange = (event) => {
     const selectedSemester = event.target.value;
 
@@ -68,34 +67,24 @@ function Header() {
     console.log("working at selected semester");
     console.log(selectedSemester);
 
-    // fetchTableData();
-    // id love to update fetch table data here but am not sure how to do so best
+   
   };
 
   return (
     <header className="header">
       <div className="header__logo">
         <img src={logo} alt="Subletify" />
-        <div className="company_name">Supletify</div>
+        <button className ="subletifybutton"><strong>Supletify </strong>{school}</button>
       </div>
 
       <div className="header__container">
         <div className="header__buttons">
-          <select id="dropdownbutton2" className="input-padding" required>
-            <option value={school}>{school}</option>
-          </select>
+          
 
-          {/* <select id="dropdownbutton2" className="input-padding" required>
-            <option value="">Select Semester</option>
-            {semesters.map((semester, index) => (
-              <option key={index} value={semester}>
-                {semester}
-              </option>
-            ))}
-          </select> */}
+          
           <select
-            id="dropdownbutton2"
-            className="input-padding"
+            className="dropdownbutton3"
+            id="input-padding-only"
             required
             value={semester}
             onChange={handleSemesterChange}
@@ -107,17 +96,19 @@ function Header() {
               </option>
             ))}
          </select>
-        </div>
-      </div>
-      <button className="new_listing" id="dropdownbutton2" onClick={toNewListings}>
+        
+      
+      <button className="dropdownbutton3" onClick={toNewListings}>
         Create New Listing
       </button>
-      <button className="messages" id="dropdownbutton2" onClick={toMessages}>
+      <button className="dropdownbutton3" onClick={toMessages}>
         Messages
       </button>
-      <button className="logout_button" id="dropdownbutton2" onClick={logoutHandler}>
+      <button className="dropdownbutton3" onClick={logoutHandler}>
         Logout
       </button>
+      </div>
+      </div>
     </header>
   );
 }
