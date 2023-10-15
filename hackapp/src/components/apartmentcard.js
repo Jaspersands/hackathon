@@ -2,7 +2,6 @@ import React from 'react';
 import houseImage from '../Assets/houseimg.png';
 
 import './apartmentcard.css'
-//here
 
 function ApartmentCard({ apartment }) {
   let title = apartment.addressabrev;

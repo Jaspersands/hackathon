@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import supabase from './supabase';
 import ApartmentCard from './components/apartmentcard';
+import "./index.css"
 
 function TableData() {
     const [data, setData] = useState([]);
@@ -24,7 +25,9 @@ function TableData() {
 
     return (
         <div>
-            <h1>Table Data</h1>
+        <h1>Available Listings</h1>
+        <div className="grid-container">
+            <div className="card-grid">
             {data.map((apartment) => (
                 <li key={apartment.id}>
                     <ApartmentCard
@@ -36,6 +39,8 @@ function TableData() {
                     />
                 </li>
             ))}
+            </div>
+        </div>
         </div>
     );
 }

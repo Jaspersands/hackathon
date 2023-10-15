@@ -43,6 +43,7 @@ function Header() {
     <header className="header">
       <div className="header__logo">
         <img src={logo} alt="Subletify" />
+        <div className = "company_name">Subletify</div>
       </div>
       <div className="header__container">
         <div className="header__buttons">
