@@ -3,11 +3,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:cornflowerblue
+    background-color:aliceblue
   }
   
   .welcome-content {
-    text-align: center;
+    text-align: left;
   }
   
   .welcome-heading {
@@ -25,4 +25,230 @@
     color:midnightblue
     
   }
+
+  .welcome-message {
+    color:#4a267e;
+    text-align: center;
+  }
+  
+
+  /* colors: 
+dark dark:#2b1549;
+dark: #4a267e
+normal: #9463f6
+light: #c7b7dd
+white: #e7dff1
+*/
+.logoimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logocard {
+  display: flex;
+  flex-direction: column; /* Change to column layout to stack items vertically */
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color:#7b4eb8;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login_screen {
+  margin: 0;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; 
+}
+/* @font-face {
+font-family: 'regular';
+src: url('../assets/fonts/BasisGrotesquePro-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'heavy_inv';
+src: url('../assets/fonts/BasisGrotesquePro-Medium.ttf') format('truetype');
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.left_login{
+  width: 55%;
+  height: 100vh; 
+  background-color:#4a267e;
+}
+.logo_box_login{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+#invisibly_logo{
+  width: 50%;
+}
+.greeting{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  margin-top: 30px;
+  font-family: 'heavy_inv';
+}
+.login_container {
+  border-radius: 20px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  padding: 50px;
+  height: auto;
+  margin: auto;
+}
+.login_title_box{
+  width: 350px;
+  height: 100px;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_title{
+  margin: 0px;
+  font-size: 55px;
+  font-family: 'heavy_inv';
+  color: black;
+  margin-left: 10px;
+}
+#login_logo{
+  float: left;
+  width: 30px;
+}
+.input_box_login {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.input_box_login label {
+  margin-bottom: 5px;
+}
+
+.input_box_login input {
+  height: 40px;
+  width: 98.5%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+
+#login_submit{
+  background-color:#4a267e;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border:none;
+  color: white;
+  margin-bottom: 10px;
+
+}
+
+#login_register_on{
+  background-color:#4a267e;
+  width: 45%;
+  height: 45px;
+  border-radius: 10px;
+  border:none;
+  color: #c7b7dd;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  
+
+}
+#login_register_off{
+  background-color:#c7b7dd;
+  width: 45%;
+  height: 45px;
+  border-radius: 10px;
+  border:none;
+  color: #4a267e;
+  margin-bottom: 10px;
+  margin-left: 5px;
+
+}
+#login_submit:hover{
+  cursor: pointer;
+  background-color:#7b4eb8;
+}
+#login_cartoon{
+  width: 30vw;
+  height: auto;
+}
+
+.cartoon_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+  .loadingIcon#loginload {
+    /* margin-top: -98px;
+    margin-right: 8px;  */
+    margin-top: -37px;
+    margin-right:10px;
+    float: right;
+    animation: rotate 2s linear infinite;
+  }
+
+
+  /* Style the tab container */
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.both_buttons {
+  gap: 10px;
+}
+/* Style the tabs */
+.tab {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+/* Style the active tab */
+.tab.active {
+  background-color: #ddd;
+}
+
+
+
+  
   

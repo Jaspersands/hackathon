@@ -6,7 +6,7 @@ import TableData from './TableData';
 import FileUploader from './FileUploader';
 import Login from './Login';
 import CreateAccount from './CreateAccount';
-import Welcome from './Welcome';
+import Welcome from './Welcome2';
 
 //psuh
 function App() {
