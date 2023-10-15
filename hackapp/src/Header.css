@@ -30,7 +30,7 @@
 .new_listing{
    cursor: pointer;
     color: black;
-    text-decoration: underline;
+    
     font-size: 15px;
     font-family:'Varela Round', sans-serif;
 }
@@ -88,6 +88,7 @@
   color:white;
   color:#000;
   margin-left: 10px;
+  font-size: 15px;
   
 
 }
@@ -162,7 +163,7 @@ background-color: #999a9a7e;
   justify-content: flex-end;
   color: black;
   font-size: 12px;
-  text-decoration: underline;
+  
 }
 
 .header__user button {
