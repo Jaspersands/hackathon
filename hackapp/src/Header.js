@@ -109,6 +109,7 @@ function Header() {
          </select>
         </div>
       </div>
+      
       <button className="new_listing" id="dropdownbutton2" onClick={toNewListings}>
         Create New Listing
       </button>

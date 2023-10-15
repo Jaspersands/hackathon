@@ -25,6 +25,7 @@ function ApartmentCard({ apartment }) {
         <p className="semester">{semester}</p>
         <p className="price">{price}$ per month</p>
 
+
       </div>
     </div>
     

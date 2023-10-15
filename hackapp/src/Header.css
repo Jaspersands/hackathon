@@ -30,12 +30,12 @@
 .new_listing{
    cursor: pointer;
     color: black;
-    
-    font-size: 15px;
+    text-decoration: underline;
+    font-size: 12px;
     font-family:'Varela Round', sans-serif;
+    margin-top: 7px;
+
 }
-
-
 
 .header__container {
   display: flex;
@@ -177,4 +177,12 @@ background-color: #999a9a7e;
 
 .company_name{
   font-family: 'Varela Round', sans-serif;
+}
+
+.logout_button{
+  border-radius: 10px;
+  border: none;
+  width: 65px;
+  height: 30px;
+  text-decoration: none;
 }
