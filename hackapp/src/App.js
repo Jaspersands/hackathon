@@ -8,6 +8,7 @@ import Login from './Login';
 import CreateAccount from './CreateAccount';
 import Welcome from './Welcome';
 
+
 function App() {
   const myApartment = {
     addressabrev: "123 Main St",
@@ -22,22 +23,43 @@ function App() {
         <Route path="/login" element={<LoginWithoutHeader><Login /></LoginWithoutHeader>} />
         <Route path="/createaccount" element={<LoginWithoutHeader><CreateAccount /></LoginWithoutHeader>} />
         <Route path="/listings" element={<DefaultLayout><FileUploader /></DefaultLayout>} />
+        <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
+      
       </Routes>
     </Router>
   );
 }
 
 // Define the default layout with the header
+// const WelcomeTest = () => (
+//   <div>
+//     <Login2 />
+    
+//     </div>
+  
+// );
+
+
 const DefaultLayout = () => (
   <div>
     <Header />
     {/* <ApartmentCard apartment={myApartment} /> */}
     <div className="App">
+      
+      <TableData />
+    </div>
+  </div>
+);
+
+const NewListing = () => (
+  <div>
+    
+    <div className="App">
       <header className="App-header">
-        <h4>Supabase db Uploader</h4>
+  
         <FileUploader />
       </header>
-      <TableData />
+      
     </div>
   </div>
 );
