@@ -136,7 +136,7 @@ if (insertError) {
           </select>   
           <br />
           <div className="the-btns">
-            <button className="submitButton" type='submit'>Upload to DB</button>
+            <button className="submitButton" type='submit'>Upload</button>
           <button className='back-btn' type='button' onClick={toListings}>
             Back to Listings
           </button></div>

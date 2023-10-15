@@ -74,7 +74,7 @@ function Header() {
     <header className="header">
       <div className="header__logo">
         <img src={logo} alt="Subletify" />
-        <button className ="subletifybutton"><strong>Supletify </strong>{school}</button>
+        <button className ="subletifybutton"><strong>Subletify </strong>{school}</button>
       </div>
 
       <div className="header__container">
