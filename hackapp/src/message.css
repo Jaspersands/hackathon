@@ -1,0 +1,40 @@
+.message-container {
+    display: flex;
+}
+
+.conversation-list-container {
+    width: 30%; /* Adjust the width as needed */
+    padding: 10px;
+    border-right: 1px solid #ccc; /* Add a border between conversations and messages */
+}
+
+.message-list-container {
+    flex: 1;
+    padding: 10px;
+}
+
+.conversation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Add a scrollbar if the list is too long */
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Add a scrollbar if the list is too long */
+}
+.sent-message {
+    text-align: right;
+    margin-right: 30%; /* Adjust the percentage as needed */
+    /* Add any additional styling for sent messages */
+}
+
+.received-message {
+    text-align: left;
+    margin-left: 30%; /* Adjust the percentage as needed */
+    /* Add any additional styling for received messages */
+}
+/* Add any additional styling as needed */
