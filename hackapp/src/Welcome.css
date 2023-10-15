@@ -10,6 +10,10 @@
     text-align: left;
   }
   
+  .input-padding {
+    padding: 10px; /* Adjust the padding value according to your preference */
+}
+
   .welcome-heading {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -86,11 +90,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .left_login{
   width: 55%;
-  height: 100vh; 
+  height: 100%; 
   background-color:#4a267e;
 }
+
 .logo_box_login{
   margin-top: 60px;
   display: flex;
@@ -119,12 +125,14 @@ code {
   width: 350px;
   padding: 50px;
   height: auto;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 .login_title_box{
   width: 350px;
   height: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -147,7 +155,9 @@ code {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 20px;
+ 
+  
+  
 }
 
 .input_box_login label {
@@ -179,12 +189,15 @@ code {
   height: 45px;
   border-radius: 10px;
   border:none;
-  color: #c7b7dd;
+  color:white;
+  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5px;
   
 
 }
+
+
 #login_register_off{
   background-color:#c7b7dd;
   width: 45%;
