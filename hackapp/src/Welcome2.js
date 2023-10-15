@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import logo from './Assets/apartment_logo.svg';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext'; // Assuming you've created AuthContext.js
-import Login from './Login';
 import supabase from './supabase';
 
 
