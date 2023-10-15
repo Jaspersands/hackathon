@@ -106,7 +106,7 @@ const FileUploader = () => {
     }
     setFormData({ id: '', price: '', square_footage: '' }); // Clear the form data
   };
-
+//comment 
   return (
     <div>
       <h2>Add your apartment to Subletify:</h2>
