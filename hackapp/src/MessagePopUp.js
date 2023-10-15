@@ -4,12 +4,13 @@ import './messagePopUp.css';
 import supabase from './supabase';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import submitBtn from './Assets/submit_button.svg';
 
 function MessagePopUp({ apartment, onClose }) {
   const navigate = useNavigate();
   const [newMessage, setNewMessage] = useState('');
   const auth = useAuth();
-  const {loggedIn } = useAuth();
+  const { loggedIn } = useAuth();
 
   const toMessage = () => {
     navigate('/message');
@@ -34,16 +35,21 @@ function MessagePopUp({ apartment, onClose }) {
   };
 
   return (
-    <div className="popup">
-      <div className="popup-content">
+    <div className="popup-message">
+      <div className="popup-content-message">
         <div>
           <p>Prompt to send a message to the lister:</p>
-          <textarea
-            placeholder="Type your message..."
-            value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
-          />
-          <button onClick={handleSendMessage}>Send</button>
+          <div className="input-container">
+            <textarea
+              className="box"
+              placeholder="Type your message..."
+              value={newMessage}
+              onChange={(e) => setNewMessage(e.target.value)}
+            />
+            <button className="message-btn" onClick={handleSendMessage}>
+              <img src={submitBtn} alt="Submit" className="icon" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

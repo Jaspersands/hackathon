@@ -1,17 +1,18 @@
-.card {
-    display: flex;
-    flex-direction: column; /* Change to column layout to stack items vertically */
-    width: 250px;
-    height: 225px;
-    margin: 20px;
-    background-color: rgba(245, 245, 245, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  width: 300px;
+  height: 100px;
+  background-color: #e7dff1;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
 
-.card:hover {
-  background-color: rgba(230, 230, 230, 0.9);
+.card2:hover {
+  background-color: #dccdef;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
   
@@ -37,7 +38,7 @@
     padding: 5px 10px 10px 10px;
   }
   
-  .text, .semester, .price {
+  .text2, .semester2, .price2 {
     margin: 0;
     margin-bottom: 10px;
     font-family: 'League Spartan', sans-serif;

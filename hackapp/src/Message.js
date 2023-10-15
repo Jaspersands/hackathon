@@ -130,11 +130,16 @@ function Message() {
     
 
     return (
-        <div className="message-container">
+        <div className="message-container2">
+            <div className="title-bar">
+  <div className="message-title">Chat Room</div>
+  <button className="back" onClick={back}>
+    Back
+  </button>
+</div>
+            <div className="conversation-list-container-wrapper">
             <div className="conversation-list-container">
-                <button className="back" onClick={back}>
-                    Back
-                </button>
+                
                 {loading ? (
                     <p>Loading...</p>
                 ) : conversations.length === 0 ? (
@@ -173,6 +178,7 @@ function Message() {
                             {title}
                         </h2>
                         {selectedMessages.map((message) => (
+                            <div className="words-wrapper">
                             <li
                                 key={message.id}
                                 className={
@@ -183,6 +189,7 @@ function Message() {
                             >
                                 {message.text}
                             </li>
+                            </div>
                         ))}
                         <div>
                             <input
@@ -198,6 +205,8 @@ function Message() {
                 )}
             </div>
         </div>
+        </div>
+
     );
 }
 

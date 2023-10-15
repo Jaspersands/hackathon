@@ -41,25 +41,25 @@ function ApartmentPopup({ apartment }) {
           <p className="rent">Price: {`$${apartment.price}`}</p>
           <p className="availability">Availability: {apartment.semester}</p>
           <div className="message">Please message lister, if you are interested in subletting this apartment!</div>
-          <button className="message-lister-button">Message Lister!</button>
-
-        </div>
-
-        <div className="message">
-          Please message the lister if you are interested in subletting this apartment!
-        </div>
-        <button className="message-lister-button" onClick={openMessagePopup}>
-          Message Lister!
-        </button>
-
-        {/* Conditionally render the MessagePopUp based on the state */}
-        {showMessagePopup && (
+          <button className="message-lister-button" onClick={openMessagePopup}>Message Lister!</button>
+          {showMessagePopup && (
           <MessagePopUp
             apartment={apartment}
             message="Prompt to send a message to the lister:"
             onClose={closeMessagePopup}
           />
         )}
+        </div>
+
+       
+
+        {/* {showMessagePopup && (
+          <MessagePopUp
+            apartment={apartment}
+            message="Prompt to send a message to the lister:"
+            onClose={closeMessagePopup}
+          />
+        )} */}
       </div>
     </div>
   );

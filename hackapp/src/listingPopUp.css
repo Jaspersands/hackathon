@@ -28,7 +28,7 @@ white: #e7dff1
 }
 
 .pop-up-image {
-  width: 800px;
+  width: 700px;
   height: 400px;
   max-height: 500px;
 }
@@ -70,8 +70,11 @@ white: #e7dff1
 }
 
 .wrap{
-  background-color: #e7dff1;
-  width: 100%;
+  background-color: rgb(230, 229, 229);
+  width: 91%;
   height: 100%;
   margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+
 }
