@@ -5,6 +5,7 @@ import logo from './Assets/apartment_logo.svg';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext'; // Assuming you've created AuthContext.js
 import supabase from './supabase';
+import Header from "./Header";
 
 
 
@@ -24,6 +25,9 @@ function Welcome() {
     const [schoolYear, setSchoolYear] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [passwordReg, setPasswordReg] = useState('');
+    const [data, setData] = useState('');
+    const [universities, setUniversities] = useState('')
+    const [school, setSchool] = useState('')
 
     const [error, setError] = useState(null);
 
@@ -144,7 +148,9 @@ function Welcome() {
             }
 
             // Login successful
-            login(user.id); // Assuming your login function accepts the user ID as an argument
+            login(user.id); 
+            // Header();
+            // Assuming your login function accepts the user ID as an argument
         } catch (error) {
             //console.error('Login error:', error.message);
             setError(error.message);
