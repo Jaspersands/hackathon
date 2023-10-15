@@ -10,28 +10,26 @@ import { AuthProvider, useAuth } from './AuthContext';
 
 //psuh
 function App() {
-  
   return (
     <AuthProvider>
-      <Router>
-        <Routes>
-        <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
-          <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
-          <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
-          <Route path="/message" element={<MessageLayout><Message /></MessageLayout>} />
-
-        </Routes>
-      </Router>
+      <SemesterProvider>
+        <Router>
+          <Routes>
+          <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
+            <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
+            <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
+          
+          </Routes>
+        </Router>
+      </SemesterProvider>
     </AuthProvider>
   );
 }
-
 
 const DefaultLayout = () => (
   <div>
     <Header />
     <div className="App">
-      
       <TableData />
     </div>
   </div>
@@ -45,14 +43,6 @@ const NewListing = () => (
   </div>
 );
 
-const MessageLayout = () => (
-  <div>
-    <div className="App">
-        <Message />
-    </div>
-  </div>
-);
-
 
 const WelcomeWithoutHeader = ({ children }) => (
   <div>
@@ -61,6 +51,5 @@ const WelcomeWithoutHeader = ({ children }) => (
     </Routes>
   </div>
 );
-
 
 export default App;

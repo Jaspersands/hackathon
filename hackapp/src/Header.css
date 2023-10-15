@@ -30,8 +30,9 @@
 .new_listing{
    cursor: pointer;
     color: black;
-    text-decoration: underline;
+    
     font-size: 15px;
+    font-family:'Varela Round', sans-serif;
 }
 
 
@@ -76,6 +77,34 @@
   color: black;
   border: 1px solid #ccc;
   background: #f0f0f0; 
+}
+
+#dropdownbutton2{
+  background-color:#c7b7dd;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border:none;
+  color:white;
+  color:#000;
+  margin-left: 10px;
+  font-size: 15px;
+  
+
+}
+.input_box_login {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  
+}
+
+.input-padding {
+  padding: 10px;
+  margin-bottom: 10px; /* Adjust the padding value according to your preference */
 }
 
 .university_dropdown ul {
@@ -134,7 +163,7 @@ background-color: #999a9a7e;
   justify-content: flex-end;
   color: black;
   font-size: 12px;
-  text-decoration: underline;
+  
 }
 
 .header__user button {
@@ -144,4 +173,8 @@ background-color: #999a9a7e;
 .header__logo img {
   width: 40px; 
   height: auto; 
+}
+
+.company_name{
+  font-family: 'Varela Round', sans-serif;
 }
