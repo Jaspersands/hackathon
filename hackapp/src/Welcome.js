@@ -1,6 +1,8 @@
 // Login.js
 import React, { useState } from 'react';
 import './Welcome.css';
+import '../src/components/apartmentcard.css'
+import logo from './Assets/apartment_logo.svg'
 
 const Welcome = () => {
   //const [username, setUsername] = useState('');
@@ -27,25 +29,51 @@ const Welcome = () => {
         window.location.href = loginUrl;
     }
     // You can add more sophisticated login logic here, like API calls, etc.
- 
+      const [username, setUsername] = useState('');
+      const [password, setPassword] = useState('');
+    
+      const handleLogin = () => {
+        // Implement your login logic here
+        console.log('Logging in with:', username, password);
+        // You can add more sophisticated login logic here, like API calls, etc.
+      };
+    
+      const newAccount = () => {
+        // Implement your login logic here
+        const currentUrl = window.location.href;
+        const newUrl = currentUrl.replace('/login', '/createaccount');
+        window.location.href = newUrl;
+      };
 
     return (
-        <div className="welcome-container">
-          <div className="welcome-content">
-            <h1 className="welcome-heading">Welcome to Subletify!</h1>
-            <form className="welcome-form">
-              <button className="btn btn-primary welcome-btn" type="button" onClick={toRegister}>
-                Create Account
-              </button>
-              <button className="btn btn-secondary welcome-btn" type="button" onClick={toLogin}>
-                Login
-              </button>
-              <button className="btn btn-secondary welcome-btn" type="button" onClick={toListings}>
-                Listings
-              </button>
-            </form>
-          </div>
-        </div>
+      <div>
+      <div className="welcome-message">
+        <h1>Welcome to Subletify:</h1> {/* Large welcome message */}
+        <h1>The best way to sublet your apartment</h1> {/* Large welcome message */}
+      
+      </div>
+      <div className ="logocard" >
+      <img className="logoimage" src={logo} alt="square-image"  />
+    </div>
+      <div className ="card" >
+      <label>
+          Username:
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <br />
+        <button type="button" onClick={handleLogin}>
+          Login
+        </button>
+        <button type="button" onClick={toRegister}>
+          Create new account
+        </button>
+    </div>
+    </div>
       );
 };
 
