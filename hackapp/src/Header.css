@@ -78,6 +78,33 @@
   background: #f0f0f0; 
 }
 
+#dropdownbutton2{
+  background-color:#c7b7dd;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border:none;
+  color:white;
+  color:#000;
+  margin-left: 10px;
+  
+
+}
+.input_box_login {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  
+}
+
+.input-padding {
+  padding: 10px;
+  margin-bottom: 10px; /* Adjust the padding value according to your preference */
+}
+
 .university_dropdown ul {
   list-style: none;
   padding: 0;

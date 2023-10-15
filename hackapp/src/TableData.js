@@ -3,18 +3,31 @@ import React, { useEffect, useState } from 'react';
 import supabase from './supabase';
 import ApartmentCard from './components/apartmentcard';
 import ApartmentPopup from './listingPopUp';
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "./index.css"
 import { useAuth } from './AuthContext'; // Assuming you've created AuthContext.js
 
 
 function TableData() {
-
-    const auth = useAuth();
-    console.log(auth)
-
     const [data, setData] = useState([]);
     const [selectedApartment, setSelectedApartment] = useState(null);
     const [isPopUp, setIsPopUp] = useState(false);
+    const auth = useAuth(); // Assuming useAuth provides a method to check if the user is logged in
+
+    const { login, loggedIn } = useAuth();
+    console.log(loggedIn)
+    const navigate = useNavigate();
+    useEffect(() => {
+        
+        // Check if the user is already logged in
+        if (loggedIn == -1) {
+        // Redirect or handle as needed
+        // Example: Redirect to the home page
+        navigate('/');
+        }
+    }, [auth]);
+
 
 
     useEffect(() => {
