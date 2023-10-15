@@ -108,6 +108,7 @@ const FileUploader = () => {
     square_footage: '',
     address: '',
     description: '',
+    semester:'',
   });
 
   const [imageFile, setImageFile] = useState(null);
@@ -145,6 +146,7 @@ const FileUploader = () => {
       image_path: objectName,
       address: formData.address,
       description: formData.description,
+      semester: formData.semester,
     },
   ]);
 
@@ -196,6 +198,20 @@ if (insertError) {
           <br />
           <label>Description: </label>
           <input type='text' name='description' value={formData.description} onChange={handleInputChange} />
+          <br />
+          <label htmlFor="semester">Semester: </label>
+          <select
+            id="semester"
+            name="semester"
+            value={formData.semester}
+            onChange={handleInputChange}
+          >
+            <option value="">Select a semester</option>
+            <option value="Fall 2024">Fall 2024</option>
+            <option value="Summer 2024">Summer 2024</option>
+            <option value="Spring 2024">Spring 2024</option>
+
+          </select>   
           <br />
           <button type='submit'>Upload to DB</button>
           <button className='btn btn-primary welcome-btn' type='button' onClick={toListings}>
