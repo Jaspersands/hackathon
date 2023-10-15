@@ -69,6 +69,7 @@ const FileUploader = () => {
       address: formData.address,
       description: formData.description,
       semester: formData.semester,
+      school:"WashU"
     },
   ]);
 
