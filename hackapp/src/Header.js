@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
-import './Header.css'; 
-import logo from './Assets/apartment_logo.svg'
+import './Header.css';
+import logo from './Assets/apartment_logo.svg';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 function redirectToLogin() {
   const currentUrl = window.location.href;
   const loginUrl = currentUrl + 'login';
   window.location.href = loginUrl;
 }
-//comment 
+
 function Header() {
   const [showDropdownUni, setShowDropdownUni] = useState(false);
   const [showDropdownSem, setShowDropdownSem] = useState(false);
   const [selectedUniversity, setSelectedUniversity] = useState('');
   const [selectedSemester, setSelectedSemester] = useState('');
+  const { logout } = useAuth();
 
   const navigate = useNavigate();
 
-
-  const universities = ['UCLA', 'USC', 'Duke']; //REPLACE WITH PULL FROM DATABASE
-  const semesters = ['Spring 2024', 'Winter', 'Fall 2024']; //REPLACE WITH PULL FROM DATABASE
+  const universities = ['UCLA', 'USC', 'Duke']; // REPLACE WITH PULL FROM DATABASE
+  const semesters = ['Spring 2024', 'Winter', 'Fall 2024']; // REPLACE WITH PULL FROM DATABASE
 
   const selectUniversity = (university) => {
     setSelectedUniversity(university);
@@ -31,7 +32,6 @@ function Header() {
     setShowDropdownSem(false);
   };
 
-
   const toggleDropdownUni = () => {
     setShowDropdownUni(!showDropdownUni);
   };
@@ -41,19 +41,24 @@ function Header() {
   };
 
   function toNewListings() {
-    navigate("/newlisting");
-    //const currentUrl = window.location.href;
-    //const loginUrl = currentUrl + 'listings';
-    //window.location.href = loginUrl;
-}
-  
+    navigate('/newlisting');
+    // const currentUrl = window.location.href;
+    // const loginUrl = currentUrl + 'listings';
+    // window.location.href = loginUrl;
+  }
+
+  function logoutHandler() {
+    console.log("hi")
+    logout();
+  }
+
   return (
     <header className="header">
       <div className="header__logo">
         <img src={logo} alt="Subletify" />
-        <div className = "company_name">Subletify</div>
+        <div className="company_name">Subletify</div>
       </div>
-      
+
       <div className="header__container">
         <div className="header__buttons">
        
@@ -81,16 +86,15 @@ function Header() {
                               
                             </select>
         </div>
-        
       </div>
       <div className="new_listing" onClick={toNewListings} style={{ cursor: 'pointer', color: 'black' }}>
-      Create New Listing
-    </div>
-      {/* <div className="header__user">
-        <button className='login_button' onClick={redirectToLogin}>
-          login
+        Create New Listing
+      </div>
+      <div className="header__user">
+        <button className="logout_button" onClick={logoutHandler}>
+          Logout
         </button>
-      </div> */}
+      </div>
     </header>
   );
 }

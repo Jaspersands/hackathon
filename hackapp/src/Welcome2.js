@@ -33,11 +33,9 @@ function Welcome() {
 
         // Check if the user is already logged in
         if (loggedIn !== -1) {
-            // Redirect or handle as needed
-            // Example: Redirect to the home page
-            const currentUrl = window.location.href;
-            const listingUrl = currentUrl + 'listings';
-            window.location.href = listingUrl;
+        // Redirect or handle as needed
+        // Example: Redirect to the home page
+        navigate('/listings');
         }
     }, [auth]);
 
