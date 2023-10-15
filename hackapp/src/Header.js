@@ -56,27 +56,30 @@ function Header() {
       
       <div className="header__container">
         <div className="header__buttons">
-          <button className='university_button' onClick={toggleDropdownUni}>{selectedUniversity || 'University'}
-</button>
-          {showDropdownUni && (
-            <div className="university_dropdown">
-              <ul>
-                {universities.map((university, index) => (
-                  <li key={index} onClick={() => selectUniversity(university)}>{university}</li>
-                ))}
-              </ul>
-            </div>
-          )}         
-          <button className='semester_button' onClick={toggleDropdownSem}>{selectedSemester || 'Semester'}</button>
-          {showDropdownSem && (
-            <div className="semester_dropdown">
-              <ul>
-                {semesters.map((semester, index) => (
-                  <li key={index} onClick={() => selectSemester(semester)}>{semester}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+       
+                            <select
+                                id = "dropdownbutton2" class = "input-padding" 
+                                required
+                            >
+                                <option value="">Select School</option>
+                                <option value="WashU">WashU</option>
+                                <option value="USC">USC</option>
+                                <option value="UCLA">UCLA</option>
+                                <option value="SLU">SLU</option>
+                                <option value="UChicago">UChicago</option>
+                            </select>
+                 
+                            <select
+                                id = "dropdownbutton2" class = "input-padding" 
+                                required
+                            >
+                                <option value="">Select Semester</option>
+                                <option value="Winter 2024">Winter 2024</option>
+                                <option value="Spring 2024">Spring 2024</option>
+                                <option value="Summer 2024">Summer 2024</option>
+                                <option value="Fall 2024">Fall 2024</option>
+                              
+                            </select>
         </div>
         
       </div>

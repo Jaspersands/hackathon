@@ -263,7 +263,7 @@ function Welcome() {
                         <div className="input_box_login">
                             <label htmlFor="schoolYear">School Year</label>
                             <select
-                                id = "login_register_on" value={schoolYear}
+                                id = "dropdownbutton" class = "input-padding" value={schoolYear}
                                 onChange={(e) => setSchoolYear(e.target.value)}
                                 required
                             >

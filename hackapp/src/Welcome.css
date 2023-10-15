@@ -11,7 +11,8 @@
   }
   
   .input-padding {
-    padding: 10px; /* Adjust the padding value according to your preference */
+    padding: 10px;
+    margin-bottom: 10px; /* Adjust the padding value according to your preference */
 }
 
   .welcome-heading {
@@ -193,6 +194,18 @@ code {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5px;
+  
+
+}
+
+#dropdownbutton{
+  background-color:#4a267e;
+  width: 45%;
+  height: 45px;
+  border-radius: 10px;
+  border:none;
+  color:white;
+  
   
 
 }
