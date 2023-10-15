@@ -5,31 +5,32 @@ import Header from './Header';
 import TableData from './TableData';
 import FileUploader from './FileUploader';
 import Welcome from './Welcome2';
-import { AuthProvider, useAuth } from './AuthContext';
+import { AuthProvider } from './AuthContext'; // Assuming AuthProvider doesn't use SemesterContext
 
-//psuh
+// Import SemesterProvider
+import { SemesterProvider } from './SemesterContext';
+
 function App() {
-  
   return (
     <AuthProvider>
-      <Router>
-        <Routes>
-        <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
-          <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
-          <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
-        
-        </Routes>
-      </Router>
+      {/* Wrap both Header and TableData with SemesterProvider */}
+      <SemesterProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
+            <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
+            <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
+          </Routes>
+        </Router>
+      </SemesterProvider>
     </AuthProvider>
   );
 }
-
 
 const DefaultLayout = () => (
   <div>
     <Header />
     <div className="App">
-      
       <TableData />
     </div>
   </div>
@@ -43,7 +44,6 @@ const NewListing = () => (
   </div>
 );
 
-
 const WelcomeWithoutHeader = ({ children }) => (
   <div>
     <Routes>
@@ -51,6 +51,5 @@ const WelcomeWithoutHeader = ({ children }) => (
     </Routes>
   </div>
 );
-
 
 export default App;

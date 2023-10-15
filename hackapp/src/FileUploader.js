@@ -1,17 +1,29 @@
 // export default FileUploader;
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import supabase from './supabase';
 import './Welcome.css';
 import { useNavigate } from 'react-router-dom';
 import logo from './Assets/apartment_logo.svg';
+import { useAuth } from './AuthContext';
 
 const FileUploader = () => {
   const navigate = useNavigate();
-
+  const auth = useAuth();
+  const {loggedIn } = useAuth();
   function toListings() {
     navigate('/listings');
   }
+
+  useEffect(() => {
+              
+      // Check if the user is already logged in
+      if (loggedIn == -1) {
+      // Redirect or handle as needed
+      // Example: Redirect to the home page
+      navigate('/');
+      }
+  }, [auth]);
 
   const [formData, setFormData] = useState({
     price: '',
