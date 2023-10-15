@@ -7,32 +7,26 @@ import FileUploader from './FileUploader';
 import Login from './Login';
 import CreateAccount from './CreateAccount';
 import Welcome from './Welcome2';
+import { AuthProvider, useAuth } from './AuthContext';
 
 //psuh
 function App() {
   
   return (
-    <Router>
-      <Routes>
-      <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
-        <Route path="/login" element={<LoginWithoutHeader><Login /></LoginWithoutHeader>} />
-        <Route path="/createaccount" element={<LoginWithoutHeader><CreateAccount /></LoginWithoutHeader>} />
-        <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
-        <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
-      
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+        <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
+          <Route path="/login" element={<LoginWithoutHeader><Login /></LoginWithoutHeader>} />
+          <Route path="/createaccount" element={<LoginWithoutHeader><CreateAccount /></LoginWithoutHeader>} />
+          <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
+          <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
+        
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
-
-// Define the default layout with the header
-// const WelcomeTest = () => (
-//   <div>
-//     <Login2 />
-    
-//     </div>
-  
-// );
 
 
 const DefaultLayout = () => (
