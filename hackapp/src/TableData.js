@@ -3,9 +3,27 @@ import React, { useEffect, useState } from 'react';
 import supabase from './supabase';
 import ApartmentCard from './components/apartmentcard';
 import ApartmentPopup from './listingPopUp';
+import { useLocation } from 'react-router-dom';
+import { useAuth } from './AuthContext';
+import { useNavigate } from 'react-router-dom';
 import "./index.css"
 
 function TableData() {
+    const { login, loggedIn } = useAuth();
+    console.log(loggedIn)
+    const navigate = useNavigate();
+    const auth = useAuth(); // Assuming useAuth provides a method to check if the user is logged in
+
+    useEffect(() => {
+      
+      // Check if the user is already logged in
+      if (loggedIn == -1) {
+      // Redirect or handle as needed
+      // Example: Redirect to the home page
+      navigate('/');
+      }
+    }, [auth]);
+
     const [data, setData] = useState([]);
     const [selectedApartment, setSelectedApartment] = useState(null);
     const [isPopUp, setIsPopUp] = useState(false);

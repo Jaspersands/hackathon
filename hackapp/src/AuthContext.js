@@ -4,18 +4,25 @@ import { createContext, useContext, useState } from 'react';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [loggedIn, setLoggedIn] = useState(-1);
+  const [loggedIn, setLoggedIn] = useState(() => {
+    // Check local storage for the user's authentication information
+    const storedUserId = localStorage.getItem('userId');
+    return storedUserId ? parseInt(storedUserId, 10) : -1;
+  });
 
   const login = (userId) => {
-    // You may want to implement your login logic here
+    // Save the user's authentication information in local storage
+    localStorage.setItem('userId', userId.toString());
     setLoggedIn(userId);
   };
 
   const logout = () => {
-    // You may want to implement your logout logic here
+    // Remove the user's authentication information from local storage
+    localStorage.removeItem('userId');
     setLoggedIn(-1);
   };
 
+  // ...
 
   return (
     <AuthContext.Provider value={{ loggedIn, login, logout }}>
