@@ -7,6 +7,7 @@ import FileUploader from './FileUploader';
 import Welcome from './Welcome2';
 import Message from './Message';
 import { AuthProvider, useAuth } from './AuthContext';
+import { SemesterProvider} from './SemesterContext'
 
 //psuh
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
             <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
             <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
-          
+            <Route path="/message" element={<MessageLayout><Message /></MessageLayout>} />
           </Routes>
         </Router>
       </SemesterProvider>
@@ -39,6 +40,14 @@ const NewListing = () => (
   <div>
     <div className="App">
         <FileUploader />
+    </div>
+  </div>
+);
+
+const MessageLayout = () => (
+  <div>
+    <div className="App">
+        <Message />
     </div>
   </div>
 );

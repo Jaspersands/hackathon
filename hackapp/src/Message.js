@@ -115,8 +115,10 @@ function Message() {
                 <div>
                     <div className="conversation-list">
                         {conversations.map(conversation => (
-                            <li key={conversation.conversationId} onClick={() => { setSelectedConversation(conversation.conversationId); fetchMessages(); }}>
-                                <ConversationCard
+                            <li key={conversation.conversationId} onClick={async () => { 
+    await setSelectedConversation(conversation.conversationId); 
+    await fetchMessages(); }}>                                
+    <ConversationCard
                                     conversation={{
                                         text: conversation.text,
                                         sender: conversation.sender,

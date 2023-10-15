@@ -2,9 +2,14 @@ import React from 'react';
 import './listingPopUp.css'
 import houseImage from './Assets/houseimg.png';
 import supabase from './supabase';
+import { useNavigate } from 'react-router-dom';
 
 
 function ApartmentPopup({apartment}) {
+  const navigate = useNavigate();
+  const toMessage = () => {
+    navigate('/message');
+  };
     if (!apartment) {
         return null; 
       }
@@ -15,6 +20,8 @@ function ApartmentPopup({apartment}) {
       const {data,error} = supabase.storage.from(bucketName).getPublicUrl(objectName);
 
       console.log(data.publicUrl)
+
+      
 
   return (
     <div className="popup">
@@ -29,7 +36,7 @@ function ApartmentPopup({apartment}) {
         </div>
 
         <div className="message">Please message lister, if you are interested in subletting this apartment!</div>
-        <button className="message-lister-button">Message Lister!</button>
+        <button className="message-lister-button" onClick={toMessage}>Message Lister!</button>
       </div>
     </div>
   );
