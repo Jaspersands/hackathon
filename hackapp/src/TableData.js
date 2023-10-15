@@ -54,7 +54,7 @@ function TableData() {
 
     return (
         <div>
-        <h1>Available Listings</h1>
+        <p className="title">Available Listings</p>
         <div className="grid-container">
             <div className="card-grid">
             {data.map((apartment) => (
@@ -64,6 +64,7 @@ function TableData() {
                             addressabrev: apartment.address,
                             semester: apartment.semester,
                             rent: apartment.price,
+                            image: apartment.image_path
                         }}
                     />
                 </li>
@@ -78,7 +79,6 @@ function TableData() {
             <button className="close-button" onClick={() => setIsPopUp(false)}>X</button>
                 </div>
                 <ApartmentPopup apartment={selectedApartment}  />
-                <p>This is the popup content</p>
                 </div>
                
             </div>

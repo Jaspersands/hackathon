@@ -32,6 +32,7 @@
     color: black;
     text-decoration: underline;
     font-size: 15px;
+    font-family:'Varela Round', sans-serif;
 }
 
 
@@ -171,4 +172,8 @@ background-color: #999a9a7e;
 .header__logo img {
   width: 40px; 
   height: auto; 
+}
+
+.company_name{
+  font-family: 'Varela Round', sans-serif;
 }
