@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import './Header.css'; 
 import logo from './Assets/apartment_logo.svg'
+import { useNavigate } from 'react-router-dom';
 
 function redirectToLogin() {
   const currentUrl = window.location.href;
   const loginUrl = currentUrl + 'login';
   window.location.href = loginUrl;
 }
-
+//comment 
 function Header() {
   const [showDropdownUni, setShowDropdownUni] = useState(false);
   const [showDropdownSem, setShowDropdownSem] = useState(false);
   const [selectedUniversity, setSelectedUniversity] = useState('');
   const [selectedSemester, setSelectedSemester] = useState('');
 
-
+  const navigate = useNavigate();
 
 
   const universities = ['UCLA', 'USC', 'Duke']; //REPLACE WITH PULL FROM DATABASE
@@ -38,6 +39,13 @@ function Header() {
   const toggleDropdownSem = () => {
     setShowDropdownSem(!showDropdownSem);
   };
+
+  function toNewListings() {
+    navigate("/newlisting");
+    //const currentUrl = window.location.href;
+    //const loginUrl = currentUrl + 'listings';
+    //window.location.href = loginUrl;
+}
   
   return (
     <header className="header">
@@ -45,6 +53,7 @@ function Header() {
         <img src={logo} alt="Subletify" />
         <div className = "company_name">Subletify</div>
       </div>
+      
       <div className="header__container">
         <div className="header__buttons">
           <button className='university_button' onClick={toggleDropdownUni}>{selectedUniversity || 'University'}
@@ -69,7 +78,11 @@ function Header() {
             </div>
           )}
         </div>
+        
       </div>
+      <div onClick={toNewListings} style={{ cursor: 'pointer', color: 'black' }}>
+      Create New Listing
+    </div>
       {/* <div className="header__user">
         <button className='login_button' onClick={redirectToLogin}>
           login
