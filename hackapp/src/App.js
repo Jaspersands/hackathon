@@ -10,19 +10,14 @@ import Welcome from './Welcome';
 
 //psuh
 function App() {
-  const myApartment = {
-    addressabrev: "123 Main St",
-    semester: "Fall",
-    rent: 1200,
-  };
+  
   return (
-    // <Welcome/>
     <Router>
       <Routes>
       <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
         <Route path="/login" element={<LoginWithoutHeader><Login /></LoginWithoutHeader>} />
         <Route path="/createaccount" element={<LoginWithoutHeader><CreateAccount /></LoginWithoutHeader>} />
-        <Route path="/listings" element={<DefaultLayout><FileUploader /></DefaultLayout>} />
+        <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
         <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
       
       </Routes>
@@ -43,7 +38,6 @@ function App() {
 const DefaultLayout = () => (
   <div>
     <Header />
-    {/* <ApartmentCard apartment={myApartment} /> */}
     <div className="App">
       
       <TableData />
