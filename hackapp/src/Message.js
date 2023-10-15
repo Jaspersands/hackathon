@@ -31,6 +31,10 @@ function Message() {
         }
     }, [auth]);
 
+    function back() {
+        navigate('/listings');
+      }
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -109,16 +113,22 @@ function Message() {
 
     return (
         <div>
+            <button className="back" onClick={back}>
+            Back
+            </button>
             {loading ? (
                 <p>Loading...</p>
+            ) : conversations.length === 0 ? (
+                <p>You have no messages.</p>
             ) : (
                 <div>
                     <div className="conversation-list">
                         {conversations.map(conversation => (
-                            <li key={conversation.conversationId} onClick={async () => { 
-    await setSelectedConversation(conversation.conversationId); 
-    await fetchMessages(); }}>                                
-    <ConversationCard
+                            <li key={conversation.conversationId} onClick={async () => {
+                                await setSelectedConversation(conversation.conversationId);
+                                await fetchMessages();
+                            }}>
+                                <ConversationCard
                                     conversation={{
                                         text: conversation.text,
                                         sender: conversation.sender,

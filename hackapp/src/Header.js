@@ -52,6 +52,10 @@ function Header() {
     navigate('/newlisting');
   }
 
+  function toMessages() {
+    navigate('/message');
+  }
+
   function logoutHandler() {
     logout();
   }
@@ -107,6 +111,9 @@ function Header() {
       </div>
       <button className="new_listing" id="dropdownbutton2" onClick={toNewListings}>
         Create New Listing
+      </button>
+      <button className="messages" id="dropdownbutton2" onClick={toMessages}>
+        Messages
       </button>
       <button className="logout_button" id="dropdownbutton2" onClick={logoutHandler}>
         Logout
