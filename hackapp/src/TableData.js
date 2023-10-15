@@ -15,7 +15,7 @@ function TableData() {
     const [isPopUp, setIsPopUp] = useState(false);
     const auth = useAuth(); // Assuming useAuth provides a method to check if the user is logged in
 
-    const { login, loggedIn } = useAuth();
+    const { loggedIn } = useAuth();
     console.log(loggedIn)
     const navigate = useNavigate();
     useEffect(() => {
@@ -28,7 +28,9 @@ function TableData() {
         }
     }, [auth]);
 
-
+    function dmHandler() {
+        navigate('/message');
+    }
 
     useEffect(() => {
         async function fetchData() {
@@ -39,6 +41,7 @@ function TableData() {
             if (error) {
                 console.error('Error fetching data:', error);
             } else {
+                console.log(data);
                 setData(data);
             }
         }
@@ -79,7 +82,9 @@ function TableData() {
                 </div>
                 <ApartmentPopup apartment={selectedApartment}  />
                 <p>This is the popup content</p>
+                <button className="dm-button" onClick={dmHandler}>message about this room</button>
                 </div>
+                
                
             </div>
         )}  

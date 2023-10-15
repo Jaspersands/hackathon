@@ -5,6 +5,7 @@ import Header from './Header';
 import TableData from './TableData';
 import FileUploader from './FileUploader';
 import Welcome from './Welcome2';
+import Message from './Message';
 import { AuthProvider, useAuth } from './AuthContext';
 
 //psuh
@@ -17,7 +18,8 @@ function App() {
         <Route path="/" element={<WelcomeWithoutHeader><Welcome /></WelcomeWithoutHeader>} />
           <Route path="/listings" element={<DefaultLayout><FileUploader/></DefaultLayout>} />
           <Route path="/newlisting" element={<NewListing><FileUploader /></NewListing>} />
-        
+          <Route path="/message" element={<MessageLayout><Message /></MessageLayout>} />
+
         </Routes>
       </Router>
     </AuthProvider>
@@ -39,6 +41,14 @@ const NewListing = () => (
   <div>
     <div className="App">
         <FileUploader />
+    </div>
+  </div>
+);
+
+const MessageLayout = () => (
+  <div>
+    <div className="App">
+        <Message />
     </div>
   </div>
 );
