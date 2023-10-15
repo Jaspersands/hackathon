@@ -23,7 +23,8 @@ function ApartmentCard({ apartment }) {
       <div className="description">
         <p className="text">{title}</p>
         <p className="semester">{semester}</p>
-        <p className="price">{price}$ per month</p>
+        <p className="price">${price} per month</p>
+
 
       </div>
     </div>

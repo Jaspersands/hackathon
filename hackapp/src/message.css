@@ -1,40 +1,101 @@
-.message-container {
+@font-face {
+    font-family: 'Varela Round';
+    src: url('./Assets/fonts/VarelaRound-Regular.ttf') format('truetype');
+  }
+  .message-container2 {
     display: flex;
-}
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+  }
+  .conversation-list-container-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-bar {
+    display: flex;
+    justify-content: space-between; /* Space the items in-between */
+    align-items: center; /* Center vertically */
+    width: 100%;
+  }
 
-.conversation-list-container {
-    width: 30%; /* Adjust the width as needed */
+  .conversation-list-container {
+    width: 60%;
     padding: 10px;
-    border-right: 1px solid #ccc; /* Add a border between conversations and messages */
-}
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
 
 .message-list-container {
-    flex: 1;
+    width: 100%;
     padding: 10px;
-}
+    min-height: 300px; /* Set the desired height */
+    overflow-y: auto; /* Make it scrollable if content overflows */
+    background-color: rgb(245, 242, 242);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 15px;
+  }
 
-.conversation-list {
+  .conversation-list,
+  .message-list {
     list-style: none;
     padding: 0;
     margin: 0;
     overflow-y: auto; /* Add a scrollbar if the list is too long */
-}
+  }
 
-.message-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow-y: auto; /* Add a scrollbar if the list is too long */
-}
 .sent-message {
     text-align: right;
-    margin-right: 30%; /* Adjust the percentage as needed */
-    /* Add any additional styling for sent messages */
+   background-color: white;
+   border-radius: 5px;
+   padding-right: 10px;
+   margin-bottom: 5px;
+   width: 100%;
 }
 
 .received-message {
     text-align: left;
-    margin-left: 30%; /* Adjust the percentage as needed */
-    /* Add any additional styling for received messages */
+    background-color: #e7dff1;
+   border-radius: 5px;
+   padding-left: 10px;
+   margin-bottom: 5px;
+   width: 100%;
 }
-/* Add any additional styling as needed */
+
+.message-title {
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 60px;
+    text-align: left;
+    flex: 1; /* Allow it to take up available space */
+  }
+
+  .back{
+    align-self: center; 
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e7dff1;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .back:hover{
+    
+    background-color: #e2d5f2;
+    
+  }

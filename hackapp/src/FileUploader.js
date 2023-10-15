@@ -135,10 +135,11 @@ if (insertError) {
 
           </select>   
           <br />
-          <button type='submit'>Upload to DB</button>
-          <button className='btn btn-primary welcome-btn' type='button' onClick={toListings}>
+          <div className="the-btns">
+            <button className="submitButton" type='submit'>Upload to DB</button>
+          <button className='back-btn' type='button' onClick={toListings}>
             Back to Listings
-          </button>
+          </button></div>
         </form>
       </div>
     </div>

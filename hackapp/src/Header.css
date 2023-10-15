@@ -111,3 +111,14 @@
   height: auto; 
 }
 
+.company_name{
+  font-family: 'Varela Round', sans-serif;
+}
+
+.logout_button{
+  border-radius: 10px;
+  border: none;
+  width: 65px;
+  height: 30px;
+  text-decoration: none;
+}

@@ -34,6 +34,31 @@ code {
   list-style: none; 
 }
 
+.submitButton{
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.back-btn{
+  border-radius: 10px;
+  border: none;
+  width: 150px;
+  height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.the-btns{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top:15px;
+}
+
 .popup-container {
   position: fixed;
   top: 0;
