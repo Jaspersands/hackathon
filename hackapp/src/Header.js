@@ -48,6 +48,7 @@ function Header() {
   }
 
   function logoutHandler() {
+    console.log("hi")
     logout();
   }
 
