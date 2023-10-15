@@ -3,8 +3,14 @@ import React, { useEffect, useState } from 'react';
 import supabase from './supabase';
 import ApartmentCard from './components/apartmentcard';
 import "./index.css"
+import { useAuth } from './AuthContext'; // Assuming you've created AuthContext.js
+
 
 function TableData() {
+
+    const auth = useAuth();
+    console.log(auth)
+
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -25,6 +31,7 @@ function TableData() {
 
     return (
         <div>
+            
         <h1>Available Listings</h1>
         <div className="grid-container">
             <div className="card-grid">
