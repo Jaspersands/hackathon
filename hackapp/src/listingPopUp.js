@@ -57,7 +57,7 @@ function ApartmentPopup({ apartment }) {
           />
         )}
       </div>
-    </div>
+    </div> 
   );
 }
 
