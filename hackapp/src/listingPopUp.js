@@ -33,29 +33,33 @@ function ApartmentPopup({ apartment }) {
   return (
     <div className="popup">
       <div className="popup-content">
-        <img className="pop-up-image" src={data.publicUrl} alt="square-image" />
-        <div>
+      
+        <img className="pop-up-image" src={data.publicUrl} alt="square-image"  />
+        <div className="wrap">
           <p className="address">{apartment.address}</p>
           <p className="desc">Description: {`${apartment.description}`}</p>
           <p className="rent">Price: {`$${apartment.price}`}</p>
           <p className="availability">Availability: {apartment.semester}</p>
-        </div>
-
-        <div className="message">
-          Please message the lister if you are interested in subletting this apartment!
-        </div>
-        <button className="message-lister-button" onClick={openMessagePopup}>
-          Message Lister!
-        </button>
-
-        {/* Conditionally render the MessagePopUp based on the state */}
-        {showMessagePopup && (
+          <div className="message">Please message lister, if you are interested in subletting this apartment!</div>
+          <button className="message-lister-button" onClick={openMessagePopup}>Message Lister!</button>
+          {showMessagePopup && (
           <MessagePopUp
             apartment={apartment}
             message="Prompt to send a message to the lister:"
             onClose={closeMessagePopup}
           />
         )}
+        </div>
+
+       
+
+        {/* {showMessagePopup && (
+          <MessagePopUp
+            apartment={apartment}
+            message="Prompt to send a message to the lister:"
+            onClose={closeMessagePopup}
+          />
+        )} */}
       </div>
     </div> 
   );

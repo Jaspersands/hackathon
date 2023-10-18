@@ -183,7 +183,7 @@ function Welcome() {
                         </button>
                     </div>
                     <div className="login_title_box">
-                        <img id="login_logo" src={logo} alt="" />
+                        
                         <div className="login_title">Login</div>
                     </div>
 
@@ -207,7 +207,7 @@ function Welcome() {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        <button type="button" onClick={handleLogin}>
+                        <button id="login_submit" onClick={handleLogin}>
                             Login
                         </button>
                     </form>
@@ -264,6 +264,8 @@ function Welcome() {
                         <div className="input_box_login">
                             <label htmlFor="schoolYear">School Year</label>
                             <select
+                                id="dropdown4"
+                                className="input-padding-only"
                                 value={schoolYear}
                                 onChange={(e) => setSchoolYear(e.target.value)}
                                 required
@@ -296,7 +298,7 @@ function Welcome() {
                                 required
                             />
                         </div>
-                        <button type="submit">Submit</button>
+                        <button id="login_submit">Submit</button>
                     </form>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
 

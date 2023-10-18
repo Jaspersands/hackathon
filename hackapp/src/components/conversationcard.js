@@ -53,10 +53,10 @@ function ConversationCard({ conversation }) {
 
   return (
     <div>
-      <div className="card">
-        <p className="text">{title}</p>
-        <p className="semester">{latest_mes}</p>
-        <p className="price">{text}</p>
+      <div className="card2">
+        <p className="text2">{title}</p>
+        <p className="semester2">{latest_mes}</p>
+        <p className="price2">{text}</p>
       </div>
     </div>
   );

@@ -69,6 +69,7 @@ const FileUploader = () => {
       address: formData.address,
       description: formData.description,
       semester: formData.semester,
+      school:"WashU"
     },
   ]);
 
@@ -135,10 +136,11 @@ if (insertError) {
 
           </select>   
           <br />
-          <button type='submit'>Upload to DB</button>
-          <button className='btn btn-primary welcome-btn' type='button' onClick={toListings}>
+          <div className="the-btns">
+            <button className="submitButton" type='submit'>Upload</button>
+          <button className='back-btn' type='button' onClick={toListings}>
             Back to Listings
-          </button>
+          </button></div>
         </form>
       </div>
     </div>

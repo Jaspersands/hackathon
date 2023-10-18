@@ -10,6 +10,7 @@ import { AuthProvider, useAuth } from './AuthContext';
 import { SemesterProvider} from './SemesterContext'
 
 //psuh
+
 function App() {
   return (
     <AuthProvider>

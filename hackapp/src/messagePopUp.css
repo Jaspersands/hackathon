@@ -1,0 +1,24 @@
+.box{
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  .message-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .icon{
+    color: #2b1549;
+    cursor: pointer;
+  }
