@@ -1,3 +1,3 @@
-# hackathon
+# Subletify
 
 Jasper, Josh, Krista, Maxanne
